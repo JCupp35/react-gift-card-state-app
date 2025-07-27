@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Little Lemon Gift Card App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The **Little Lemon Gift Card App** is a simple React application built with JSX as part of the *Advanced React* course on Coursera. The app displays a gift card page for the fictional Little Lemon Restaurant, allowing a user to "spend" a gift card for a free dinner for four guests. It demonstrates state management in React using the `useState` hook to update an object-based state when the user clicks a button.
 
-## Available Scripts
+## Functionality
+The app initially displays the following information:
+- **Title**: Gift Card Page
+- **Customer**: Jennifer Smith
+- **Gift Card Details**: "Free dinner for 4 guests"
+- **Instructions**: "To use your coupon, click the button below."
+- **Button**: "Spend Gift Card"
 
-In the project directory, you can run:
+When the user clicks the "Spend Gift Card" button, the app updates the state to reflect that the gift card has been used, showing:
+- **Updated Details**: "Your coupon has been used."
+- **Updated Instructions**: "Please visit our restaurant to renew your gift card."
+- The "Spend Gift Card" button disappears after being clicked.
 
-### `npm start`
+This behavior is achieved by updating the state object (`giftCard`) in the `spendGiftCard` function, which modifies the `text`, `valid`, and `instructions` properties using the `setGiftCard` function and the spread operator (`...prevState`).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
+- **App.jsx**: The main React component containing the `useState` hook, the `spendGiftCard` function, and the JSX for rendering the gift card page.
+- **index.jsx**: Entry point for the React application (not modified in this lab).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
+![Gift Card App Output 1](assets/output1.png)
+![Gift Card App Output 1](assets/output2.png)
 
-### `npm test`
+## Technologies Used
+- **React**: For building the user interface.
+- **JSX**: For writing the component's UI structure.
+- **Create React App**: For the development environment.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Learning Objectives
+This project demonstrates:
+- Using the `useState` hook to manage object-based state in React.
+- Updating specific properties of a state object using the spread operator.
+- Handling user interactions with event handlers (e.g., button clicks).
+- Conditionally rendering UI elements based on state (e.g., hiding the button after use).
