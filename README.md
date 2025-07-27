@@ -19,8 +19,8 @@ When the user clicks the "Spend Gift Card" button, the app updates the state to 
 This behavior is achieved by updating the state object (`giftCard`) in the `spendGiftCard` function, which modifies the `text`, `valid`, and `instructions` properties using the `setGiftCard` function and the spread operator (`...prevState`).
 
 ## Project Structure
-- **App.jsx**: The main React component containing the `useState` hook, the `spendGiftCard` function, and the JSX for rendering the gift card page.
-- **index.jsx**: Entry point for the React application (not modified in this lab).
+- **App.js**: The main React component containing the `useState` hook, the `spendGiftCard` function, and the JSX for rendering the gift card page.
+- **index.js**: Entry point for the React application (not modified in this lab).
 
 ## Screenshots
 ![Gift Card App Output 1](assets/output1.png)
